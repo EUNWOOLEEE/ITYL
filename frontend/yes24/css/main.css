@@ -16,6 +16,7 @@ main > * {
 }
 button,
 .login_button > input,
+.guest_button > input,
 .login_checkbox > input {
 	cursor: pointer;
 }
@@ -48,13 +49,24 @@ button.guest.unclicked {
 	border-width: 1px 1px 1px 0;
 }
 
+/* 비회원 탭 */
+.local_member {
+	display: block;
+}
+.local_guest {
+	display: none;
+}
+
 /* 아이디, 비밀번호 입력 */
-.login_info {
+/* 주문번호, 비밀번호 입력 */
+.login_info,
+.guest_info {
 	display: flex;
 	flex-direction: column;
 	gap: 0.5rem;
 }
-.login_info > input {
+.login_info > input,
+.guest_info > input {
 	width: calc(100% - 4px - 1.4rem);
 	padding: 1rem 0.8rem;
 	border: 1px solid lightgray;
@@ -83,7 +95,9 @@ button.guest.unclicked {
 }
 
 /* 로그인 버튼 */
-.login_button > input {
+/* 확인 버튼 */
+.login_button > input,
+.guest_button > input {
 	padding: 1rem 0;
 	width: 100%;
 	color: white;
@@ -95,17 +109,21 @@ button.guest.unclicked {
 }
 
 /* 아이디/비밀번호 찾기 */
-.login_search {
+/* 주문번호/주문 비밀번호 찾기 */
+.login_search,
+.order_search {
 	display: flex;
 	flex-direction: row;
 	gap: 4px;
 	font-size: 0.75rem;
 }
-.login_search > a{
+.login_search > a,
+.order_search > a {
 	color: rgb(99, 99, 99);
 	text-decoration: none;
 }
-.login_search > p {
+.login_search > p,
+.order_search > p {
 	color: lightgray;
 }
 
@@ -115,7 +133,7 @@ button.guest.unclicked {
 	flex-direction: column;
 	text-align: center;
 	margin-top: 3rem;
-	padding-bottom: 17%;
+	padding-bottom: 13.5%;
 	gap: 8px;
 }
 .login_social > button {
@@ -144,4 +162,5 @@ div.ad {
 	display: flex;
 	flex-direction: column;
 	gap: 0.7rem;
+	padding-bottom: 6.5%;
 }

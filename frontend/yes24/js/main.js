@@ -1,12 +1,21 @@
-// const $tabMember = document.querySelector('.member');
-// const $tabGuest = document.querySelector('.guest');
+const $tabMember = document.querySelector('.member');
+const $tabGuest = document.querySelector('.guest');
+const $localMember = document.querySelector('.local_member');
+const $localGuest = document.querySelector('.local_guest');
 
-// function clickLoginTab(clickedTab, anotherTab) {
-// 	console.log(clickedTab);
-// 	console.log(anotherTab);
-// 	clickedTab.classList.add('clicked');
-// 	anotherTab.classList.add('unclicked');
-// }
+function clickLoginTab(clickedTab, anotherTab, clickedDiv, anotherDiv) {
+	clickedTab.classList.add('clicked');
+	clickedTab.classList.remove('unclicked');
+	anotherTab.classList.add('unclicked');
+	anotherTab.classList.remove('clicked');
 
-// $tabMember.addEventListener('click', clickLoginTab($tabMember, $tabGuest));
-// $tabGuest.addEventListener('click', clickLoginTab($tabGuest, $tabMember));
+	clickedDiv.style = 'display: block';
+	anotherDiv.style = 'display: none';
+}
+
+$tabMember.addEventListener('click', () => {
+	clickLoginTab($tabMember, $tabGuest, $localMember, $localGuest);
+})
+$tabGuest.addEventListener('click', () => {
+	clickLoginTab($tabGuest, $tabMember, $localGuest, $localMember);
+})

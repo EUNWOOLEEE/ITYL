@@ -12,6 +12,7 @@
 		referrerpolicy="no-referrer"
 	/>
 	<link rel="stylesheet" href="./css/index.css">
+	<script src="./js/main.js" defer></script>
 </head>
 <body>
 	<!-- 헤더 -->
@@ -30,59 +31,84 @@
 			<!-- 일반 로그인 영역 -->
 			<div class="login_local">
 
-				<!-- 회원, 비회원 탭 -->
+				<!-- 회원, 비회원 탭 선택 -->
 				<div class="login_member_type">
 					<button class="member clicked">회원</button>
 					<button class="guest unclicked">비회원 주문확인</button>
 				</div>
 
-				<form>
-					<!-- 아이디, 비밀번호 입력 -->
-					<div class="login_info">
-						<input id="input_id" type="text" placeholder="아이디">
-						<input id="input_pwd" type="password" placeholder="비밀번호">
+				<!-- 회원 탭 -->
+				<div class="local_member">
+					<form>
+						<!-- 아이디, 비밀번호 입력 -->
+						<div class="login_info">
+							<input id="input_id" type="text" placeholder="아이디">
+							<input id="input_pwd" type="password" placeholder="비밀번호">
+						</div>
+						<!-- 체크박스 -->
+						<div class="login_checkbox">
+							<input id="remain_login_state" type="checkbox">
+							<label for="remain_login_state">로그인 상태 유지</label>
+							<input id="save_id" type="checkbox">
+							<label for="save_id">아이디 저장</label>
+						</div>
+						<!-- 로그인 버튼 -->
+						<div class="login_button">
+							<input type="submit" value="로그인">
+						</div>
+					</form>
+
+					<!-- 아이디, 비밀번호 찾기 -->
+					<div class="login_search">
+						<a href="#">아이디 찾기</a>
+						<p>|</p>
+						<a href="#">비밀번호 찾기</a>
 					</div>
 
-					<!-- 체크박스 -->
-					<div class="login_checkbox">
-						<input id="remain_login_state" type="checkbox">
-						<label for="remain_login_state">로그인 상태 유지</label>
-						<input id="save_id" type="checkbox">
-						<label for="save_id">아이디 저장</label>
+					<!-- 소셜 로그인 영역 -->
+					<div class="login_social">
+						<button>
+							<i class="fa-solid fa-mobile-screen"></i>
+							<p>네이버 아이디로 로그인</p>
+						</button>
+						<button>
+							<i class="fa-solid fa-mobile-screen"></i>
+							<p>카카오 아이디로 로그인</p>
+						</button>
+						<button>
+							<i class="fa-solid fa-mobile-screen"></i>
+							<p>페이스북 아이디로 로그인</p>
+						</button>
+						<button>
+							<i class="fa-solid fa-mobile-screen"></i>
+							<p>모바일 간편 로그인</p>
+						</button>
 					</div>
-
-					<!-- 로그인 버튼 -->
-					<div class="login_button">
-						<input type="submit" value="로그인">
-					</div>
-				</form>
-
-				<!-- 아이디, 비밀번호 찾기 -->
-				<div class="login_search">
-					<a href="#">아이디 찾기</a>
-					<p>|</p>
-					<a href="#">비밀번호 찾기</a>
 				</div>
-			</div>
 
-			<!-- 소셜 로그인 영역 -->
-			<div class="login_social">
-				<button>
-					<i class="fa-solid fa-mobile-screen"></i>
-					<p>네이버 아이디로 로그인</p>
-				</button>
-				<button>
-					<i class="fa-solid fa-mobile-screen"></i>
-					<p>카카오 아이디로 로그인</p>
-				</button>
-				<button>
-					<i class="fa-solid fa-mobile-screen"></i>
-					<p>페이스북 아이디로 로그인</p>
-				</button>
-				<button>
-					<i class="fa-solid fa-mobile-screen"></i>
-					<p>모바일 간편 로그인</p>
-				</button>
+				<!-- 비회원 탭 -->
+				<div class="local_guest">
+					<form>
+						<!-- 주문번호, 비밀번호 입력 -->
+						<div class="guest_info">
+							<input id="order_number" type="text" placeholder="주문번호">
+							<input id="order_pwd" type="password" placeholder="주문 비밀번호">
+						</div>
+						
+						<!-- 확인 버튼 -->
+						<div class="guest_button">
+							<input type="submit" value="확인">
+						</div>
+					</form>
+
+					<!-- 주문번호, 주문 비밀번호 찾기 -->
+					<div class="order_search">
+						<a href="#">주문번호 찾기</a>
+						<p>|</p>
+						<a href="#">주문 비밀번호 찾기</a>
+					</div>
+				</div>
+
 			</div>
 		</div>
 
