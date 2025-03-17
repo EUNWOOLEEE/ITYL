@@ -1,0 +1,147 @@
+/* 전체 레이아웃 조정 및 공통 적용 속성 */
+main {
+	display: flex;
+	justify-content: center;
+	gap: 2.3rem;
+	background-color: white;
+	border: 1px solid lightgray;
+}
+main > * {
+	width: 37%;
+	padding-top: 7%;
+}
+.login_local div,
+.login_search {
+	margin-bottom: 1rem;
+}
+button,
+.login_button > input,
+.login_checkbox > input {
+	cursor: pointer;
+}
+
+/* 회원, 비회원 탭 */
+.login_member_type {
+	display: flex;
+	flex-direction: row;
+}
+.login_member_type > button {
+	width: 50%;
+	border: 1px solid;
+	padding: 0.7rem 0;
+	font-weight: 600;
+}
+button.clicked {
+	background-color: white;
+	color: rgb(0, 149, 213);
+	border-color: rgb(0, 149, 213);
+}
+button.unclicked {
+	background-color: rgb(245, 245, 245);
+	color: rgb(99, 99, 99);
+	border-color: lightgray lightgray rgb(0, 149, 213) lightgray;
+}
+button.member.unclicked {
+	border-width: 1px 0 1px 1px;
+}
+button.guest.unclicked {
+	border-width: 1px 1px 1px 0;
+}
+
+/* 아이디, 비밀번호 입력 */
+.login_info {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+}
+.login_info > input {
+	width: calc(100% - 4px - 1.4rem);
+	padding: 1rem 0.8rem;
+	border: 1px solid lightgray;
+	border-radius: 3px;
+	font-size: 1rem;
+}
+
+/* 체크 박스 */
+.login_checkbox {
+	display: flex;
+	align-items: center;
+	gap: 5px;
+}
+.login_checkbox > input {
+	/* 체크박스 디자인 변경 gpt 사용 */
+	appearance: none;
+	width: 19px;
+	height: 19px;
+	border: 1px solid lightgray;
+	border-radius: 3px;
+}
+.login_checkbox > label {
+	color: rgb(99, 99, 99);
+	font-size: 0.8rem;
+	padding-right: 10px;
+}
+
+/* 로그인 버튼 */
+.login_button > input {
+	padding: 1rem 0;
+	width: 100%;
+	color: white;
+	background-color: #0080ff;
+	border: none;
+	border-radius: 3px;
+	font-size: 1.2rem;
+	font-weight: 500;
+}
+
+/* 아이디/비밀번호 찾기 */
+.login_search {
+	display: flex;
+	flex-direction: row;
+	gap: 4px;
+	font-size: 0.75rem;
+}
+.login_search > a{
+	color: rgb(99, 99, 99);
+	text-decoration: none;
+}
+.login_search > p {
+	color: lightgray;
+}
+
+/* 소셜 로그인 */
+.login_social {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	margin-top: 3rem;
+	padding-bottom: 17%;
+	gap: 8px;
+}
+.login_social > button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: 1px solid lightgray;
+	background-color: white;
+}
+.login_social i {
+	padding: 10px 10px;
+	margin-left: 0;
+	border: 1px solid lightgray;
+	border-width: 0 1px 0 0;
+	font-size: 1.3rem;
+}
+.login_social p{
+	width: 90%;
+	font-size: 0.85rem;
+	font-style: normal;
+	font-weight: normal;
+}
+
+/* 광고 배너 */
+div.ad {
+	display: flex;
+	flex-direction: column;
+	gap: 0.7rem;
+}

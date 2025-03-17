@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>yes24</title>
+	<link
+		rel="stylesheet"
+		href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+		integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+		crossorigin="anonymous"
+		referrerpolicy="no-referrer"
+	/>
+	<link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+	<!-- 헤더 -->
+	<header>
+		<h1 class="head">
+			<img src="./assets/logo.png" alt="로고">
+		</h1>
+		<p>로그인</p>
+		<button class="register"><p>회원가입</p></button>
+	</header>
+
+	<!-- 메인 -->
+	<main>
+		<!-- 왼쪽 로그인 영역 -->
+		<div class="login">
+			<!-- 일반 로그인 영역 -->
+			<div class="login_local">
+
+				<!-- 회원, 비회원 탭 -->
+				<div class="login_member_type">
+					<button class="member clicked">회원</button>
+					<button class="guest unclicked">비회원 주문확인</button>
+				</div>
+
+				<form>
+					<!-- 아이디, 비밀번호 입력 -->
+					<div class="login_info">
+						<input id="input_id" type="text" placeholder="아이디">
+						<input id="input_pwd" type="password" placeholder="비밀번호">
+					</div>
+
+					<!-- 체크박스 -->
+					<div class="login_checkbox">
+						<input id="remain_login_state" type="checkbox">
+						<label for="remain_login_state">로그인 상태 유지</label>
+						<input id="save_id" type="checkbox">
+						<label for="save_id">아이디 저장</label>
+					</div>
+
+					<!-- 로그인 버튼 -->
+					<div class="login_button">
+						<input type="submit" value="로그인">
+					</div>
+				</form>
+
+				<!-- 아이디, 비밀번호 찾기 -->
+				<div class="login_search">
+					<a href="#">아이디 찾기</a>
+					<p>|</p>
+					<a href="#">비밀번호 찾기</a>
+				</div>
+			</div>
+
+			<!-- 소셜 로그인 영역 -->
+			<div class="login_social">
+				<button>
+					<i class="fa-solid fa-mobile-screen"></i>
+					<p>네이버 아이디로 로그인</p>
+				</button>
+				<button>
+					<i class="fa-solid fa-mobile-screen"></i>
+					<p>카카오 아이디로 로그인</p>
+				</button>
+				<button>
+					<i class="fa-solid fa-mobile-screen"></i>
+					<p>페이스북 아이디로 로그인</p>
+				</button>
+				<button>
+					<i class="fa-solid fa-mobile-screen"></i>
+					<p>모바일 간편 로그인</p>
+				</button>
+			</div>
+		</div>
+
+		<!-- 오른쪽 광고 영역 -->
+		<div class="ad">
+			<img src="./assets/ad_bn1.jpg" alt="배너1">
+			<img src="./assets/ad_bn2.jpg" alt="배너2">
+		</div>
+	</main>
+
+	<!-- 푸터 -->
+	<footer>
+		<img src="./assets/login_bn.gif" alt="로그인 배너">
+		<p>Copyright © <b>YES24 Corp.</b> All Rights Reserved.</p>
+	</footer>
+</body>
+</html>

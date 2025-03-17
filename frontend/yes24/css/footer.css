@@ -1,0 +1,11 @@
+footer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 1rem;
+	padding-top: 1.2rem;
+}
+footer > p {
+	color: gray;
+	font-size: 0.8rem;
+}

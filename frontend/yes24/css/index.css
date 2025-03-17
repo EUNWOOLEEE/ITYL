@@ -1,0 +1,12 @@
+/* css 파일 구조 gpt 사용 */
+
+@import url("./body.css");
+@import url("./footer.css");
+@import url("./header.css");
+@import url("./image.css");
+@import url("./main.css");
+
+* {
+	margin: 0;
+	padding: 0;
+}
