@@ -52,6 +52,7 @@ button.guest.unclicked {
 /* 비회원 탭 */
 .local_member {
 	display: block;
+	position: relative;
 }
 .local_guest {
 	display: none;
@@ -81,17 +82,58 @@ button.guest.unclicked {
 	gap: 5px;
 }
 .login_checkbox > input {
-	/* 체크박스 디자인 변경 gpt 사용 */
-	appearance: none;
 	width: 19px;
 	height: 19px;
-	border: 1px solid lightgray;
 	border-radius: 3px;
 }
 .login_checkbox > label {
 	color: rgb(99, 99, 99);
 	font-size: 0.8rem;
 	padding-right: 10px;
+}
+
+/* 로그인 상태 유지 */
+.login_state_notice {
+	position: absolute;
+	display: none;
+	z-index: 1;
+	top: 28.5%;
+	right: 35%;
+	width: 350px;
+	height: 45%;
+	background-color: white;
+	border: 1px solid rgb(99, 99, 99);
+}
+.login_state_notice_over {
+	display: flex;
+	width: 100%;
+	background-color: rgb(235, 235, 235);
+}
+.login_state_notice_over > p {
+	padding: 0.6rem 58% 0.6rem 0.9rem;
+	font-weight: 500;
+}
+.login_state_notice_over > button {
+	font-size: 1.6rem;
+	color: rgb(99, 99, 99);
+	border: none;
+	right: 100%;
+}
+.login_state_notice_under {
+	display: flex;
+	flex-direction: column;
+	padding-left: 7.5%;
+	width: 90%;
+	gap: 0.3rem;
+	font-size: 0.78rem;
+	line-height: 1.1rem;
+	color: rgb(99, 99, 99);
+}
+.login_state_notice_under li:first-of-type {
+	margin-top: 1.8%;
+}
+.color_red {
+	color: rgb(255, 77, 77);
 }
 
 /* 로그인 버튼 */
