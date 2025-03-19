@@ -2,7 +2,6 @@ header {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	height: fit-content;
 }
 header > p:nth-of-type(1) {
 	font-weight: bold;
