@@ -36,6 +36,7 @@ button.clicked {
 	background-color: white;
 	color: rgb(0, 149, 213);
 	border-color: rgb(0, 149, 213);
+	border-width: 1px 1px 0 1px;
 }
 button.unclicked {
 	background-color: rgb(245, 245, 245);
@@ -74,6 +75,12 @@ button.guest.unclicked {
 	border-radius: 3px;
 	font-size: 1rem;
 }
+.login_error_msg {
+	display: none;
+	padding-left: 0.1rem;
+	color: tomato;
+	font-size: 0.8rem;
+}
 
 /* 체크 박스 */
 .login_checkbox {
@@ -84,7 +91,8 @@ button.guest.unclicked {
 .login_checkbox > input {
 	width: 19px;
 	height: 19px;
-	border-radius: 3px;
+	/* border: 1px solid lightgray;
+	border-radius: 3px; */
 }
 .login_checkbox > label {
 	color: rgb(99, 99, 99);
