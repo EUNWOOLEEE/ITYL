@@ -1,3 +1,15 @@
+function setInputErrorStyle(errorInput, anotherInput, errorMsg, anotherMsg) {
+	errorInput.style = 'border: 1px solid red';
+	anotherInput.style = 'border: 1px solid lightgray';
+	errorMsg.style = 'display: block';
+	anotherMsg.style = 'display: none';
+}
+
+function setInputResetStyle(input, msg) {
+	input.style = 'border: 1px solid lightgray';
+	msg.style = 'display: none';
+}
+
 // 아이디/비밀번호 예외처리
 const $loginBtn = document.querySelector('.login_button > input');
 const $loginID = document.querySelector('#input_id');
@@ -6,23 +18,13 @@ const $loginIDMsg = document.querySelector('.login_error_msg.input_id');
 const $loginPWDMsg = document.querySelector('.login_error_msg.input_pwd');
 
 $loginBtn.addEventListener('click', () => {
-	if ($loginID.value == '') {
-		$loginID.style = 'border: 1px solid red';
-		$loginPWD.style = 'border: 1px solid lightgray';
-		$loginIDMsg.style = 'display: block';
-		$loginPWDMsg.style = 'display: none';
-	}
-	else if ($loginPWD.value == '') {
-		$loginID.style = 'border: 1px solid lightgray';
-		$loginPWD.style = 'border: 1px solid red';
-		$loginIDMsg.style = 'display: none';
-		$loginPWDMsg.style = 'display: block';
-	}
+	if ($loginID.value == '')
+		setInputErrorStyle($loginID, $loginPWD, $loginIDMsg, $loginPWDMsg);
+	else if ($loginPWD.value == '')
+		setInputErrorStyle($loginPWD, $loginID, $loginPWDMsg, $loginIDMsg);
 	else {
-		$loginID.style = 'border: 1px solid lightgray';
-		$loginPWD.style = 'border: 1px solid lightgray';
-		$loginIDMsg.style = 'display: none';
-		$loginPWDMsg.style = 'display: none';
+		setInputResetStyle($loginID, $loginIDMsg);
+		setInputResetStyle($loginPWD, $loginPWDMsg);
 	}
 })
 
@@ -34,23 +36,13 @@ const $orderNumMsg = document.querySelector('.login_error_msg.order_number');
 const $orderPWDMsg = document.querySelector('.login_error_msg.order_pwd');
 
 $guestBtn.addEventListener('click', () => {
-	if ($orderNum.value == '') {
-		$orderNum.style = 'border: 1px solid red';
-		$orderPWD.style = 'border: 1px solid lightgray';
-		$orderNumMsg.style = 'display: block';
-		$orderPWDMsg.style = 'display: none';
-	}
-	else if ($orderPWD.value == '') {
-		$orderNum.style = 'border: 1px solid lightgray';
-		$orderPWD.style = 'border: 1px solid red';
-		$orderNumMsg.style = 'display: none';
-		$orderPWDMsg.style = 'display: block';
-	}
+	if ($orderNum.value == '')
+		setInputErrorStyle($orderNum, $orderPWD, $orderNumMsg, $orderPWDMsg);
+	else if ($orderPWD.value == '')
+		setInputErrorStyle($orderPWD, $orderNum, $orderPWDMsg, $orderNumMsg);
 	else {
-		$orderNum.style = 'border: 1px solid lightgray';
-		$orderPWD.style = 'border: 1px solid lightgray';
-		$orderNumMsg.style = 'display: none';
-		$orderPWDMsg.style = 'display: none';
+		setInputResetStyle($orderNum, $orderNumMsg);
+		setInputResetStyle($orderPWD, $orderPWDMsg);
 	}
 })
 
@@ -61,6 +53,8 @@ const $localMember = document.querySelector('.local_member');
 const $localGuest = document.querySelector('.local_guest');
 
 function clickLoginTab(clickedTab, anotherTab, clickedDiv, anotherDiv) {
+	cleanTabs();
+	
 	clickedTab.classList.add('clicked');
 	clickedTab.classList.remove('unclicked');
 	anotherTab.classList.add('unclicked');
@@ -68,20 +62,18 @@ function clickLoginTab(clickedTab, anotherTab, clickedDiv, anotherDiv) {
 
 	clickedDiv.style = 'display: block';
 	anotherDiv.style = 'display: none';
+}
 
+function cleanTabs() {
 	$loginID.value = '';
 	$loginPWD.value = '';
-	$loginID.style = 'border: 1px solid lightgray';
-	$loginPWD.style = 'border: 1px solid lightgray';
-	$loginIDMsg.style = 'display: none';
-	$loginPWDMsg.style = 'display: none';
+	setInputResetStyle($loginID, $loginIDMsg);
+	setInputResetStyle($loginPWD, $loginPWDMsg);
 	
 	$orderNum.value = '';
 	$orderPWD.value = '';
-	$orderNum.style = 'border: 1px solid lightgray';
-	$orderPWD.style = 'border: 1px solid lightgray';
-	$orderNumMsg.style = 'display: none';
-	$orderPWDMsg.style = 'display: none';
+	setInputResetStyle($orderNum, $orderNumMsg);
+	setInputResetStyle($orderPWD, $orderPWDMsg);
 }
 
 $tabMember.addEventListener('click', () => {
