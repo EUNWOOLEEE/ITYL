@@ -10,9 +10,9 @@ header > p:nth-of-type(1) {
 button.register {
 	padding: 0.7rem 1.2rem;
 	background-color: white;
-	border: 1px solid lightgray;
+	border: 1px solid var(--border-color);
 	border-radius: 3px;
-	box-shadow: 0.8px 0.8px lightgray;
+	box-shadow: 0.8px 0.8px var(--shadow-color);
 }
 .register > p {
 	font-weight: 600;

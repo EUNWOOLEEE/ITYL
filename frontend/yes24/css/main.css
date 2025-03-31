@@ -3,8 +3,8 @@ main {
 	display: flex;
 	justify-content: center;
 	gap: 2.3rem;
-	background-color: white;
-	border: 1px solid lightgray;
+	background-color: var(--white-base-color);
+	border: 1px solid var(--border-color);
 }
 main > * {
 	width: 37%;
@@ -33,15 +33,15 @@ button,
 	font-weight: 600;
 }
 button.clicked {
-	background-color: white;
-	color: rgb(0, 149, 213);
-	border-color: rgb(0, 149, 213);
+	background-color: var(--white-base-color);
+	color: var(--point-color);
+	border-color: var(--point-color);
 	border-width: 1px 1px 0 1px;
 }
 button.unclicked {
-	background-color: rgb(245, 245, 245);
-	color: rgb(99, 99, 99);
-	border-color: lightgray lightgray rgb(0, 149, 213) lightgray;
+	background-color: var(--gray-base-color);
+	color: var(--font-color);
+	border-color: var(--border-color) var(--border-color) var(--point-color) var(--border-color);
 }
 button.member.unclicked {
 	border-width: 1px 0 1px 1px;
@@ -71,14 +71,14 @@ button.guest.unclicked {
 .guest_info > input {
 	width: calc(100% - 4px - 1.4rem);
 	padding: 1rem 0.8rem;
-	border: 1px solid lightgray;
+	border: 1px solid var(--border-color);;
 	border-radius: 3px;
 	font-size: 1rem;
 }
 .login_error_msg {
 	display: none;
 	padding-left: 0.1rem;
-	color: tomato;
+	color: var(--warning-color);
 	font-size: 0.8rem;
 }
 
@@ -91,11 +91,9 @@ button.guest.unclicked {
 .login_checkbox > input {
 	width: 19px;
 	height: 19px;
-	/* border: 1px solid lightgray;
-	border-radius: 3px; */
 }
 .login_checkbox > label {
-	color: rgb(99, 99, 99);
+	color: var(--font-color);
 	font-size: 0.8rem;
 	padding-right: 10px;
 }
@@ -105,25 +103,25 @@ button.guest.unclicked {
 	position: absolute;
 	display: none;
 	z-index: 1;
-	top: 28.5%;
+	top: 30%;
 	right: 35%;
 	width: 350px;
 	height: 45%;
-	background-color: white;
-	border: 1px solid rgb(99, 99, 99);
+	background-color: var(--white-base-color);
+	border: 1px solid var(--notice-border-color);
 }
 .login_state_notice_over {
 	display: flex;
 	width: 100%;
-	background-color: rgb(235, 235, 235);
+	background-color: var(--notice-base-color);
 }
 .login_state_notice_over > p {
-	padding: 0.6rem 58% 0.6rem 0.9rem;
-	font-weight: 500;
+	padding: 0.6rem 57% 0.6rem 0.9rem;
+	font-weight: 600;
 }
 .login_state_notice_over > button {
 	font-size: 1.6rem;
-	color: rgb(99, 99, 99);
+	color: var(--font-color);
 	border: none;
 	right: 100%;
 }
@@ -135,13 +133,13 @@ button.guest.unclicked {
 	gap: 0.3rem;
 	font-size: 0.78rem;
 	line-height: 1.1rem;
-	color: rgb(99, 99, 99);
+	color: var(--font-color);
 }
 .login_state_notice_under li:first-of-type {
 	margin-top: 1.8%;
 }
 .color_red {
-	color: rgb(255, 77, 77);
+	color: var(--warning-color);
 }
 
 /* 로그인 버튼 */
@@ -150,8 +148,8 @@ button.guest.unclicked {
 .guest_button > input {
 	padding: 1rem 0;
 	width: 100%;
-	color: white;
-	background-color: #0080ff;
+	color: var(--button-font-color);
+	background-color: var(--button-base-color);
 	border: none;
 	border-radius: 3px;
 	font-size: 1.2rem;
@@ -169,12 +167,12 @@ button.guest.unclicked {
 }
 .login_search > a,
 .order_search > a {
-	color: rgb(99, 99, 99);
+	color: var(--font-color);
 	text-decoration: none;
 }
 .login_search > p,
 .order_search > p {
-	color: lightgray;
+	color: var(--font-color);
 }
 
 /* 소셜 로그인 */
@@ -190,13 +188,13 @@ button.guest.unclicked {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	border: 1px solid lightgray;
-	background-color: white;
+	border: 1px solid var(--border-color);
+	background-color: var(--white-base-color);
 }
 .login_social i {
 	padding: 10px 10px;
 	margin-left: 0;
-	border: 1px solid lightgray;
+	border: 1px solid var(--border-color);
 	border-width: 0 1px 0 0;
 	font-size: 1.3rem;
 }

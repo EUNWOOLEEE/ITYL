@@ -15,7 +15,7 @@
 	<script src="./js/main.js" defer></script>
 </head>
 <body>
-	<!-- 헤더 -->
+	<!-- 헤더 시작 -->
 	<header>
 		<h1>
 			<img src="./assets/logo.png" alt="로고">
@@ -23,37 +23,42 @@
 		<p>로그인</p>
 		<button class="register"><p>회원가입</p></button>
 	</header>
+	<!-- //헤더 끝 -->
 
-	<!-- 메인 -->
+	<!-- 메인 시작 -->
 	<main>
-		<!-- 왼쪽 로그인 영역 -->
+		<!-- 좌측 로그인 영역 시작 -->
 		<div class="login">
-			<!-- 일반 로그인 영역 -->
+			<!-- 일반 로그인 영역 시작 -->
 			<div class="login_local">
 
-				<!-- 회원, 비회원 탭 선택 -->
+				<!-- 회원, 비회원 탭 선택 시작 -->
 				<div class="login_member_type">
 					<button class="member clicked">회원</button>
 					<button class="guest unclicked">비회원 주문확인</button>
 				</div>
+				<!-- //회원, 비회원 탭 선택 끝 -->
 
-				<!-- 회원 탭 -->
+				<!-- 회원 탭 시작 -->
 				<div class="local_member">
 					<form action="#">
-						<!-- 아이디, 비밀번호 입력 -->
+						<!-- 아이디, 비밀번호 입력 시작 -->
 						<div class="login_info">
 							<input id="input_id" type="text" placeholder="아이디">
 							<p class="login_error_msg input_id">아이디를 입력해주세요.</p>
 							<input id="input_pwd" type="password" placeholder="비밀번호">
 							<p class="login_error_msg input_pwd">비밀번호를 입력해주세요.</p>
 						</div>
-						<!-- 체크박스 -->
+						<!-- //아이디, 비밀번호 입력 끝 -->
+
+						<!-- 체크박스 시작 -->
 						<div class="login_checkbox">
 							<input id="remain_login_state" type="checkbox">
 							<label for="remain_login_state">로그인 상태 유지</label>
 							<input id="save_id" type="checkbox">
 							<label for="save_id">아이디 저장</label>
 
+							<!-- 로그인 상태 유지 시작 -->
 							<div class="login_state_notice">
 								<div class="login_state_notice_over">
 									<p>로그인 상태 유지</p>
@@ -69,21 +74,27 @@
 									<li class="color_red">철저한 보안 및 사용환경 관리를 통해 개인정보 남용이 발생하지 않도록 주의해주시기 바랍니다.</li>
 								</ul>
 							</div>
+							<!-- //로그인 상태 유지 끝 -->
+							 
 						</div>
-						<!-- 로그인 버튼 -->
+						<!-- //체크박스 끝 -->
+
+						<!-- 로그인 버튼 시작 -->
 						<div class="login_button">
 							<input type="submit" value="로그인">
 						</div>
+						<!-- //로그인 버튼 끝 -->
 					</form>
 
-					<!-- 아이디, 비밀번호 찾기 -->
+					<!-- 아이디, 비밀번호 찾기 시작 -->
 					<div class="login_search">
 						<a href="#">아이디 찾기</a>
 						<p>|</p>
 						<a href="#">비밀번호 찾기</a>
 					</div>
+					<!-- //아이디, 비밀번호 찾기 끝 -->
 
-					<!-- 소셜 로그인 영역 -->
+					<!-- 소셜 로그인 영역 시작 -->
 					<div class="login_social">
 						<button>
 							<i class="fa-solid fa-mobile-screen"></i>
@@ -102,47 +113,58 @@
 							<p>모바일 간편 로그인</p>
 						</button>
 					</div>
+					<!-- //소셜 로그인 영역 끝 -->
 				</div>
+				<!-- //회원 탭 끝 -->
 
-				<!-- 비회원 탭 -->
+				<!-- 비회원 탭 시작 -->
 				<div class="local_guest">
 					<form>
-						<!-- 주문번호, 비밀번호 입력 -->
+						<!-- 주문번호, 비밀번호 입력 시작 -->
 						<div class="guest_info">
 							<input id="order_number" type="text" placeholder="주문번호">
 							<p class="login_error_msg order_number">주문번호를 입력해주세요.</p>
 							<input id="order_pwd" type="password" placeholder="주문 비밀번호">
 							<p class="login_error_msg order_pwd">주문 비밀번호를 입력해주세요.</p>
 						</div>
+						<!-- //주문번호, 비밀번호 입력 끝 -->
 						
-						<!-- 확인 버튼 -->
+						<!-- 확인 버튼 시작 -->
 						<div class="guest_button">
 							<input type="submit" value="확인">
 						</div>
+						<!-- //확인 버튼 끝 -->
 					</form>
 
-					<!-- 주문번호, 주문 비밀번호 찾기 -->
+					<!-- 주문번호, 주문 비밀번호 찾기 시작 -->
 					<div class="order_search">
 						<a href="#">주문번호 찾기</a>
 						<p>|</p>
 						<a href="#">주문 비밀번호 찾기</a>
 					</div>
+					<!-- //주문번호, 주문 비밀번호 찾기 끝 -->
 				</div>
+				<!-- //비회원 탭 끝 -->
 
 			</div>
+			<!-- //일반 로그인 영역 끝 -->
 		</div>
+		<!-- //좌측 로그인 영역 끝 -->
 
-		<!-- 오른쪽 광고 영역 -->
+		<!-- 우측 광고 영역 시작 -->
 		<div class="ad">
 			<img src="./assets/ad_bn1.jpg" alt="배너1">
 			<img src="./assets/ad_bn2.jpg" alt="배너2">
 		</div>
+		<!-- //우측 광고 영역 끝 -->
 	</main>
+	<!-- //메인 끝 -->
 
-	<!-- 푸터 -->
+	<!-- 푸터 시작 -->
 	<footer>
 		<img src="./assets/login_bn.gif" alt="로그인 배너">
 		<p>Copyright © <b>YES24 Corp.</b> All Rights Reserved.</p>
 	</footer>
+	<!-- //푸터 끝 -->
 </body>
 </html>

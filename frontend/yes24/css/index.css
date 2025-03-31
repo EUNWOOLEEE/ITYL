@@ -1,8 +1,20 @@
-/* css 파일 구조 gpt 사용 */
-
 @import url("./reset.css");
 @import url("./body.css");
 @import url("./footer.css");
 @import url("./header.css");
 @import url("./image.css");
 @import url("./main.css");
+
+:root {
+	--shadow-color: lightgray;
+	--border-color: lightgray;
+	--font-color: rgb(99, 99, 99);
+	--point-color: rgb(0, 149, 213);
+	--button-base-color: #0080ff;
+	--button-font-color: white;
+	--white-base-color: white;
+	--gray-base-color: rgb(245, 245, 245);
+	--warning-color: tomato;
+	--notice-base-color: rgb(235, 235, 235);
+	--notice-border-color: rgb(99, 99, 99);
+}
