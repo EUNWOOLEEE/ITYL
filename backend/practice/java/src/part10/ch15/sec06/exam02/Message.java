@@ -1,4 +1,4 @@
-package ch15.sec06.exam02;
+package part10.ch15.sec06.exam02;
 
 import lombok.AllArgsConstructor;
 

@@ -1,4 +1,4 @@
-package ch15.sec06.exam01;
+package part10.ch15.sec06.exam01;
 
 import java.util.Stack;
 

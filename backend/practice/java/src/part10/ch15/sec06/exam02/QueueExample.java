@@ -1,4 +1,4 @@
-package ch15.sec06.exam02;
+package part10.ch15.sec06.exam02;
 
 import java.util.LinkedList;
 import java.util.Queue;
@@ -12,7 +12,7 @@ public class QueueExample {
         queue.add(new Message("sendKakaotalk", "감자바"));
 
         while (queue.isEmpty() == false) {
-            Message message = queue.poll();
+           Message message = queue.poll();
             String str = null;
             if (message.command.equals("sendMail"))
                 str = "메일을";

@@ -1,4 +1,4 @@
-package ch15.sec03.exam03;
+package part10.ch15.sec03.exam03;
 
 import java.util.HashSet;
 import java.util.Iterator;

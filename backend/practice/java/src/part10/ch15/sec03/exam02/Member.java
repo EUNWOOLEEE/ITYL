@@ -1,4 +1,4 @@
-package ch15.sec03.exam02;
+package part10.ch15.sec03.exam02;
 
 import java.util.Objects;
 
