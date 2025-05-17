@@ -36,3 +36,24 @@ class Solution {
         return a != null ? a : b;
     }
 }
+
+class Solution {
+    public TreeNode answer = null;
+
+    public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
+        return dfs(root, p, q);
+    }
+
+    public TreeNode dfs(TreeNode cur, TreeNode p, TreeNode q) {
+        if (cur == null || cur == p || cur == q) {
+            return cur;
+
+        TreeNode a = dfs(cur.left, p, q);
+        TreeNode b = dfs(cur.right, p, q);
+
+        if (a != null && b != null)
+            return cur;
+        
+        return a != null ? a : b;
+    }
+}
