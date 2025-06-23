@@ -1,14 +1,26 @@
 # ITYL
 
-| 과제                                 | 디렉토리 명 | 기본 | 심화 |
- | ------------------------------------ | :---------: | :--: | :--: |
- | 01 DBMS 개요, 설치, 전체 운영 실습        |   part01   |  ✅  |  ☐  |
- | 02 데이터베이스 모델링, MySQL 유틸리티 사용법 |   part02   |  ✅  |  ☐  |
- | 03 SQL 기본                          |   part03   |  ✅  |  ☐  |
- | 04 SQL 고급                          |   part04   |  ✅  |  ☐  |
- | 05 테이블, 뷰                         |   part05   |  ✅  |  ☐  |
- | 06 인덱스, 사용자 관리                   |   part06   |  ✅  |  ☐  |
- | 07 Java 연동 JDBC 프로그래밍            |   part07   |  ✅  |  ☐  |
- | 08 Java 연동 JDBC 프로그래밍-Travel     |   part08   |  ✅  |  ☐  |
- | 01 MongoDB                          |   part09   |  ✅  |  ☐  |
- | 02 몽고DB Java연동                     |   part10   |  ✅  |  ☐  |
+## 01 Servlet, JSP, JSTL 기반 서버 프로그래밍
+
+| 항목                    | 디렉토리 명 | 기본 | 심화 |
+| ---------------------- | :---------: | :--: | :--: |
+| 01 서블릿 기초            |   part01    |  ✅  |  ☐  |
+| 02 JSP의 이해            |   part02    |  ✅  |  ☐  |
+| 03 서블릿 심화            |   part03    |  ✅  |  ☐  |
+| 04 요청 포워딩,EL, ISTL   |   part04    |  ✅  |  ☐  |
+| 05 FrontController     |   part05    |  ✅  |  ☐  |
+
+## 02 Spring Framework를 활용한 애플리케이션 개발
+
+| 항목                               | 디렉토리 명 | 기본 | 심화 |
+| --------------------------------- | :------: | :--: | :--: |
+| 01 Spring 이해                     |  part06~7  |  ✅  |  ☐  |
+| 02 Spring MVC                     |  part08  |  ✅  |  ☐  |
+| 03 Spring-MyBatis 연동             |  part09  |  ✅  |  ☐  |
+| 04 Spring 기본 게시판                |  part10  |  ✅  |  ☐  |
+| 05 Spring 기본 게시판, 파일 업로드      |  part11  |  ✅  |  ☐  |
+| 06 Rest & OpenAPl                 |  part12  |  ✅  |  ☐  |
+| 08 Spring AOP                     |  part13  |  ✅  |  ☐  |
+| 09 Spring Security Form 인증       |  part14  |  ✅  |  ☐  |
+| 10 Spring Security JWT 인증        |  part15  |  ☐  |  ☐  |
+| 11 Spring Security JWT 인증2       |  part16  |  ☐  |  ☐  |
