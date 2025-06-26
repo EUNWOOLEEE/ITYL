@@ -52,7 +52,7 @@ public class ServletConfig implements WebMvcConfigurer {
     @Override
     public void addViewControllers(ViewControllerRegistry registry) {
         registry.addViewController("/")
-                .setViewName("forward:/resources/index.html");
+                .setViewName("forward:/resources/index.html"); // webapp 하위 resources
     }
 
     // jsp view resolver 설정

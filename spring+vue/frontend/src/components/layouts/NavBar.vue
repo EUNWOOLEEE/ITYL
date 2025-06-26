@@ -2,6 +2,7 @@
 // Vue의 Composition API에서 반응형 객체와 계산 속성을 불러옴
 import { reactive, computed } from 'vue';
 import MenuGroup from './menu/MenuGroup.vue';
+import AccountMenuGroup from './menu/AccountMenuGroup.vue';
 
 // 전역 설정 값을 담고 있는 config 파일을 불러옴(현재 코드에서는 사용되지 않음)
 import config from '@/config';
@@ -44,6 +45,7 @@ const toggleNavShow = () => (state.isNavShow = !state.isNavShow);
 			<div :class="navClass" id="collapsibleNavbar">
 				<!-- 추후 네비게이션 메뉴 항목들이 들어갈 자리 -->
 				 <MenuGroup :menus="config.menus" />
+				 <AccountMenuGroup />
 			</div>
 		</div>
 	</nav>
