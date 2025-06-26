@@ -14,6 +14,7 @@ ext {
     junitVersion = '5.10.2'
     springVersion = '5.3.37'
     lombokVersion = '1.18.30'
+    springSecurityVersion = '5.8.13'
 }
 
 sourceCompatibility = '1.17'
@@ -30,6 +31,25 @@ dependencies {
             { exclude group: 'commons-logging', module: 'commons-logging' }
     implementation "org.springframework:spring-webmvc:${springVersion}"
     implementation 'javax.inject:javax.inject:1'
+
+    
+    // 보안
+    implementation("org.springframework.security:spring-security-web:${springSecurityVersion}")
+    implementation("org.springframework.security:spring-security-config:${springSecurityVersion}")
+    implementation("org.springframework.security:spring-security-core:${springSecurityVersion}")
+    implementation("org.springframework.security:spring-security-taglibs:${springSecurityVersion}")
+
+
+    // swagger
+    implementation 'io.springfox:springfox-swagger2:2.9.2'
+    implementation 'io.springfox:springfox-swagger-ui:2.9.2'
+
+
+    //jwt
+    implementation("io.jsonwebtoken:jjwt-api:0.11.5")
+    runtimeOnly("io.jsonwebtoken:jjwt-impl:0.11.5")
+    implementation("io.jsonwebtoken:jjwt-jackson:0.11.5")
+
 
     // AOP
     implementation 'org.aspectj:aspectjrt:1.9.20'
@@ -78,8 +98,6 @@ dependencies {
     implementation 'org.mybatis:mybatis:3.4.6'
     implementation 'org.mybatis:mybatis-spring:1.3.2'
 
-    implementation 'io.springfox:springfox-swagger2:2.9.2'
-    implementation 'io.springfox:springfox-swagger-ui:2.9.2'
 
     // 테스트
     testImplementation "org.springframework:spring-test:${springVersion}"

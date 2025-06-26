@@ -1,6 +1,7 @@
 package org.scoula.config;
 
 
+import org.scoula.security.config.SecurityConfig;
 import org.springframework.web.filter.CharacterEncodingFilter;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
@@ -16,8 +17,8 @@ public class WebConfig extends AbstractAnnotationConfigDispatcherServletInitiali
     final int FILE_SIZE_THRESHOLD = 1024 * 1024 * 5;
 
     @Override
-    protected Class<?>[] getRootConfigClasses() {
-        return new Class[]{RootConfig.class};
+    public Class<?>[] getRootConfigClasses() {
+        return new Class[]{RootConfig.class, SecurityConfig.class};
     }
 
     @Override
@@ -28,13 +29,7 @@ public class WebConfig extends AbstractAnnotationConfigDispatcherServletInitiali
     // 스프링의 FrontController인 DispatcherServlet이 담당할 Url 매핑 패턴, / : 모든 요청에 대해 매핑
     @Override
     protected String[] getServletMappings() {
-        return new String[]{
-                "/",
-                "/swagger-ui.html",
-                "/swagger-resources/**",
-                "/v2/api-docs",
-                "/webjars/**"
-        };
+        return new String[]{"/"};
     }
 
     // POST body 문자 인코딩 필터 설정 - UTF-8 설정
@@ -59,6 +54,4 @@ public class WebConfig extends AbstractAnnotationConfigDispatcherServletInitiali
                 );
         registration.setMultipartConfig(multipartConfig);
     }
-
-
 }
