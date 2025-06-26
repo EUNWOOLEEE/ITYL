@@ -22,5 +22,5 @@
 | 06 Rest & OpenAPl                 |  part12  |  ✅  |  ☐  |
 | 08 Spring AOP                     |  part13  |  ✅  |  ☐  |
 | 09 Spring Security Form 인증       |  part14  |  ✅  |  ☐  |
-| 10 Spring Security JWT 인증        |  part15  |  ☐  |  ☐  |
-| 11 Spring Security JWT 인증2       |  part16  |  ☐  |  ☐  |
+| 10 Spring Security JWT 인증        |  part15  |  ✅  |  ☐  |
+| 11 Spring Security JWT 인증2       |  part16  |  ✅  |  ☐  |
