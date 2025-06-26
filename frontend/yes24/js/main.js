@@ -76,10 +76,10 @@ function cleanTabs() {
 	setInputResetStyle($orderPWD, $orderPWDMsg);
 }
 
-$tabMember.addEventListener('click', () => {
+$tabMember.addEventListener('click', (e) => {
 	clickLoginTab($tabMember, $tabGuest, $localMember, $localGuest);
 })
-$tabGuest.addEventListener('click', () => {
+$tabGuest.addEventListener('click', (e) => {
 	clickLoginTab($tabGuest, $tabMember, $localGuest, $localMember);
 })
 
